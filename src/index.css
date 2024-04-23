@@ -1,0 +1,87 @@
+:root{
+    --text-color: rgb(253, 253, 253);
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url(assets/bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-y: hidden;
+}
+.stopwatch{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--text-color);
+    padding: 30px;
+    background: rgba( 255, 255, 255, 0 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 5px;
+}
+.display{
+    color: var(--text-color);
+    font-size: 10rem;
+    font-family: monospace;
+    text-shadow: 2px 2px 5px rgb(48, 48, 48);
+}
+.controls{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.controls button{
+    padding: 15px;
+    border: none;
+    font-size: 2rem;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid var(--text-color);
+    border-radius: 5px;
+    color: var(--text-color);
+    cursor: pointer;
+    text-shadow: 1px 1px 5px rgb(88, 88, 88);
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.controls button:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(25, 29, 51);
+}
+@media screen and (max-width: 770px) {
+    .display{
+        font-size: 8rem;
+    }
+    .controls button{
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width: 630px) {
+    .display{
+        font-size: 5rem;
+    }
+    .controls button{
+        padding: 10px;
+        font-size: 1.3rem;
+    }
+}
+@media screen and (max-width: 420px) {
+    .display{
+        font-size: 3rem;
+    }
+    .controls button{
+        padding: 8px;
+        font-size: 1rem;
+    }
+    .stopwatch{
+        padding: 20px;
+    }
+}
